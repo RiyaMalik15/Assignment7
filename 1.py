@@ -62,6 +62,15 @@ def factorial(n):
         return 1
     else:
         return(n*factorial(n-1))
-n = int(input("Enter number:"))
-print("Factorial:")
-print(factorial(n))
+list1=[]
+dict1={}
+n = int(input("Enter number of elemets:"))
+for i in range(n):
+    num = int(input("Enter number:"))
+    list1.append(num)
+for j in list1:
+    t=factorial(j)
+    dict1[j]=t
+print("Dictionary:")
+for k,v in dict1.items():
+    print(k,":",v)
